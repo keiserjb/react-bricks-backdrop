@@ -1,0 +1,13 @@
+name = React Bricks
+type = module
+description = React block for Walk of Fame Bricks.
+package = custom
+backdrop = 1.x
+stylesheets[all][] = css/react_bricks.css
+dependencies:
+  -backdrop:block
+
+
+
+
+

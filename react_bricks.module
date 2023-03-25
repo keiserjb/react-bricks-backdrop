@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+/*function react_bricks_page_attachments_alter(array &$attachments) {
+  // Use the dev library if we're developing locally.
+  if (in_array('react_bricks/react_app', $attachments['#attached']['library'])
+    && file_exists(__DIR__ . '/js/dist_dev')) {
+    $index = array_search('react_bricks/react_app', $attachments['#attached']['library']);
+    $attachments['#attached']['library'][$index] = 'react_bricks/react_app_dev';
+  }
+}*/
+
+/**
+ * Implements hook_config_info().
+ */
+/*function react_bricks_config_info() {
+  $prefixes['react_bricks.settings'] = array(
+    'label' => t('React Clubs settings'),
+    'group' => t('Configuration'),
+  );
+  return $prefixes;
+}*/
+
+/**
+ * Implements hook_autoload_info().
+ */
+function react_bricks_autoload_info() {
+  return array(
+    'BlockReactBricks' => 'includes/block.react_bricks.inc',
+  );
+}
+
+/**
+ * Prepares variables for react brick blocks.
+ */
+function react_bricks_preprocess_block(&$variables) {
+  $block = $variables['block'];
+  if (get_class($block) == 'BlockReactBricks') {
+    if (isset($block->settings['reactbricks'])) {
+      $variables['classes'][] = 'block-react-bricks';
+    }
+  }
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function react_bricks_block_info() {
+  $blocks = array();
+  $default_info = t('AMA Walk of Fame Bricks.');
+  $blocks['default'] = array(
+    // The name that will appear in the block list.
+    'info' => t('WOF Bricks'),
+    'description' => $default_info,
+    'class' => 'BlockReactBricks',
+
+  );
+  return $blocks;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
