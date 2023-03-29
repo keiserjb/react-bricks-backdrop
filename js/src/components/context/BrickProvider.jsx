@@ -46,7 +46,7 @@ const normalizeBricks = (results, total_items, items_per_page, total_pages, curr
 
 
 const fetchBricks = async (pageNumber, textSearch) =>  {
-  const response = await fetch(`https://test-137a472c-153f916d-14c5c44b.app.devpanel.com/api/v2/views/walk_of_fame/decoupled?combine=${textSearch}&page=${pageNumber}`)
+  const response = await fetch(`https://amafoundation-dev.modelaircraft.org/api/v2/views/walk_of_fame/decoupled?combine=${textSearch}&page=${pageNumber}`)
   //console.log(response);
   if (!response.ok) {
     throw new Error(`Network response was: ${response.status}`)
