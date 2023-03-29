@@ -22,7 +22,7 @@ const Brick = ({
                }) => (
   // <div className="col-md-4 mx-auto">
     <div>
-    <a className="brick-link" style={{display: background100 ? "block" : "none"}} href={`https://test-137a472c-153f916d-14c5c44b.app.devpanel.com/${path}`}>
+    <a className="brick-link" style={{display: background100 ? "block" : "none"}} href={`https://amafoundation-dev.modelaircraft.org/${path}`}>
       <div className="brick-wrapper-view-100" style={{display: background100 ? "flex" : "none"}}>
 
         <div className="brick-contents-view">
@@ -34,7 +34,7 @@ const Brick = ({
       </div>
     </a>
 
-    <a className="brick-link" style={{display: background500 ? "block" : "none"}} href={`https://test-137a472c-153f916d-14c5c44b.app.devpanel.com/${path}`}>
+    <a className="brick-link" style={{display: background500 ? "block" : "none"}} href={`https://amafoundation-dev.modelaircraft.org/${path}`}>
       <div className="brick-wrapper-view-500" style={{display: background500 ? "flex" : "none"}}>
         <div className="brick-contents-view">
           <p className="brick-text-view-500 text-center">{firstLine500}</p>
@@ -44,7 +44,7 @@ const Brick = ({
       </div>
     </a>
 
-    <a className="brick-link" style={{display: background1000 ? "block" : "none"}} href={`https://test-137a472c-153f916d-14c5c44b.app.devpanel.com/${path}`}>
+    <a className="brick-link" style={{display: background1000 ? "block" : "none"}} href={`https://amafoundation-dev.modelaircraft.org/${path}`}>
       <div className="brick-wrapper-view-1000" style={{display: background1000 ? "flex" : "none"}}>
 
         <div className="brick-contents-view-1000">
